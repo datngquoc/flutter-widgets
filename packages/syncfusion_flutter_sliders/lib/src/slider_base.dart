@@ -859,7 +859,7 @@ class RenderBaseSlider extends RenderProxyBox
         final double maxMinDiff = getNumerizedValue(_max - _min);
         double factorValue = (getFactorFromValue(valueInDouble ?? value) *
                     (maxMinDiff / _stepSize!))
-                .round() /
+                .ceil() /
             (maxMinDiff / _stepSize!);
         if (_isInversed) {
           factorValue = 1.0 - factorValue;
