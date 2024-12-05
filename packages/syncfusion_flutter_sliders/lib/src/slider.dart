@@ -2096,6 +2096,7 @@ class _RenderSlider extends RenderBaseSlider implements MouseTrackerAnnotation {
       final TextSpan textSpan =
           TextSpan(text: tooltipText, style: sliderThemeData.tooltipTextStyle);
       textPainter.text = textSpan;
+      textPainter.textAlign = TextAlign.center;
       textPainter.layout();
 
       tooltipShape.paint(context, thumbCenter,
